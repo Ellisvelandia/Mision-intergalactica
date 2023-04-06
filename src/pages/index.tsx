@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import Layout from "../components/Layout";
 import styles from "../styles/pages/Home.module.css";
 
@@ -15,7 +16,9 @@ const Home: NextPage = () => {
               SOLUCIÓN A LA CONECTIVIDAD Y ACCESO A LA INFORMACIÓN EN PLANETAS
               MENOS DESARROLLADOS
             </h1>
-            <p className={`text-justify text-blue sm:mt-7 mt-5 ${styles.paragraph}`}>
+            <p
+              className={`text-justify text-blue sm:mt-7 mt-5 ${styles.paragraph}`}
+            >
               Bienvenidos al comité intergaláctico de mejora de condiciones de
               vida. Como primer trabajo, necesitamos abordar uno de los mayores
               problemas en los planetas menos desarrollados: su conectividad y
@@ -29,11 +32,12 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className={`${styles.half} flex justify-end`}>
-            <a
-              href="/mision"
-              className={`${styles.exploreBtn} after:grid
+            <Link href="/mision">
+              <a
+                className={`${styles.exploreBtn} after:grid
                                 after:place-content-center`}
-            ></a>
+              ></a>
+            </Link>
           </div>
         </div>
       </header>
